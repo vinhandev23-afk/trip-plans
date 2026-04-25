@@ -1,0 +1,13 @@
+{
+  "name": "trip-plans",
+  "version": "1.0.0",
+  "description": "Trip planning workspace with PDF brochure generator and web UI",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "build": "node build-vercel.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

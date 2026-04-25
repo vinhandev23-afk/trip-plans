@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(sips -c 1122 794 --cropOffset 4488 0 /Users/nhantv5/trip-plans/roadtrip-30-4/output/preview-tall.png --out /Users/nhantv5/trip-plans/roadtrip-30-4/output/preview-page5.png)",
+      "Bash(sips -c 1122 794 --cropOffset 5610 0 /Users/nhantv5/trip-plans/roadtrip-30-4/output/preview-tall.png --out /Users/nhantv5/trip-plans/roadtrip-30-4/output/preview-page6.png)",
+      "Bash('/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' --headless=new --disable-gpu --no-sandbox --screenshot=output/preview-tall2.png --window-size=794,9000 --virtual-time-budget=10000 file://__CMDSUB_OUTPUT__/output/roadtrip-30-4-2026.html)",
+      "Bash(sips -g pixelHeight /Users/nhantv5/trip-plans/roadtrip-30-4/output/preview-tall2.png)",
+      "Bash('/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' --headless=new --disable-gpu --no-sandbox --screenshot=output/preview-new.png --window-size=794,11220 --virtual-time-budget=12000 file://__CMDSUB_OUTPUT__/output/roadtrip-30-4-2026.html)",
+      "Bash(sips -g pixelHeight /Users/nhantv5/trip-plans/roadtrip-30-4/output/preview-new.png)",
+      "Bash('/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' --headless --disable-gpu --no-sandbox --print-to-pdf=/Users/nhantv5/trip-plans/phuquy/output/phuquy-2026.pdf --print-to-pdf-no-header --no-margins --virtual-time-budget=15000 file:///Users/nhantv5/trip-plans/phuquy/output/phuquy-2026.html)",
+      "Bash(node poster.js)",
+      "Bash('/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' --headless --disable-gpu --no-sandbox --screenshot=output/poster.png --window-size=704,1700 --virtual-time-budget=10000 file://__CMDSUB_OUTPUT__/output/poster.html)",
+      "Bash('/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' --headless --disable-gpu --no-sandbox --print-to-pdf=output/roadtrip-30-4-2026.pdf --print-to-pdf-no-header --no-margins --virtual-time-budget=10000 file://__CMDSUB_OUTPUT__/output/roadtrip-30-4-2026.html)",
+      "Bash(open /Users/nhantv5/trip-plans/roadtrip-30-4/output/roadtrip-30-4-2026.pdf)"
+    ]
+  }
+}
