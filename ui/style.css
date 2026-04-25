@@ -293,11 +293,23 @@ html, body {
   flex: 1;
   overflow-y: auto;
   padding: 28px 36px;
-  max-width: 900px;
   width: 100%;
 }
 #pane-readme::-webkit-scrollbar { width: 5px; }
 #pane-readme::-webkit-scrollbar-thumb { background: var(--border-2); border-radius: 3px; }
+
+/* Constrain prose for readability; let <pre> + tables run full width */
+#pane-readme > h1,
+#pane-readme > h2,
+#pane-readme > h3,
+#pane-readme > h4,
+#pane-readme > p,
+#pane-readme > ul,
+#pane-readme > ol,
+#pane-readme > blockquote,
+#pane-readme > hr {
+  max-width: 900px;
+}
 
 /* Markdown styles */
 #pane-readme h1 {
