@@ -1,16 +1,17 @@
 # 🏍️ Road Trip 30/4 · 2026
 ## Theo Bờ Nam — Lên Tây Nguyên
 
-> **26/4 – 2/5/2026 · 7 ngày 6 đêm · 2 người · xe máy · ~1,620km · ~3.7 triệu/người**
+> **26/4 – 2/5/2026 · 7 ngày 6 đêm · 2 người · xe máy · ~1,560km · ~3.7 triệu/người**
+> **🏠 Khởi hành & về tới: 183 Trương Định, Bình Dương**
 
 ```
-SG ──► Cổ Thạch ──► Vĩnh Hy ──► Đèo Cả ──► Phú Yên ──► DT729 ──► Quy Nhơn
-[QL55 ven biển]              [Vịnh Xuân Đài · Ô Loan · Gành Đá Đĩa]  [QL1D]  │
-                                                                         Nha Trang
-                                                                               │
-                                                                    Đèo Khánh Lê (QL27C)
-                                                                               │
-                                            SG ◄── Bù Gia Mập ◄── Tà Đùng ◄── Bảo Lộc
+🏠 183 Trương Định (Bình Dương) ──► Phan Thiết ──► Bầu Trắng ──► Cổ Thạch ──► Vĩnh Hy ──► Đèo Cả ──► Phú Yên ──► DT729 ──► Quy Nhơn
+            [QL1A]                  [Võ Nguyên Giáp +              [Vịnh Xuân Đài · Ô Loan · Gành Đá Đĩa]  [QL1D]  │
+                                     đường ven biển Phan Thiết]                                                Nha Trang
+                                                                                                                    │
+                                                                                                         Đèo Khánh Lê (QL27C)
+                                                                                                                    │
+                                                         🏠 183 Trương Định ◄── Bù Gia Mập ◄── Tà Đùng ◄── Bảo Lộc
 ```
 
 ---
@@ -34,23 +35,27 @@ SG ──► Cổ Thạch ──► Vĩnh Hy ──► Đèo Cả ──► Phú
 
 ---
 
-### Day 1 · 26/4 (Chủ Nhật) — SG → Vĩnh Hy
+### Day 1 · 26/4 (Chủ Nhật) — Nhà (Bình Dương) → Phan Thiết → Vĩnh Hy
 **Tổng quãng đường: ~310km · Khởi hành 5:00**
 
 | Thời gian | Điểm dừng | Chi tiết |
 |-----------|-----------|----------|
-| 05:00 | Xuất phát SG | Xuất phát sớm để tránh nắng buổi trưa — đoạn Bình Thuận nóng kinh khủng |
-| 05:00–09:00 | SG → Phan Thiết (~200km) | **QL51** → Long Thành → Bà Rịa → **QL55 ven biển** → Xuyên Mộc → Hàm Tân → Mũi Né → Phan Thiết · *Đường ven biển Bình Thuận — không cao tốc* |
-| 09:00–10:00 | **★ BẦU TRẮNG** (Hòa Thắng, Bắc Bình, Bình Thuận) | Đồi cát trắng bao quanh hồ nước xanh ngọc — cảnh hoang sơ lạ mắt giữa sa mạc cát. Dừng ~30–40', chụp hình. Vào sáng đẹp nhất, trưa nắng gắt |
-| 10:00–11:00 | **★ CỔ THẠCH** (~30km từ Bầu Trắng) | Bãi đá 7 màu độc nhất VN. Đi bộ ra mỏm đá ~15'. Đẹp nhất lúc nước ròng — đừng đến trưa |
-| 11:00–13:00 | → Phan Rang (~80km) | QL1, đường thẳng ven biển |
-| 13:00–14:00 | Ăn trưa Phan Rang | **Bánh căn + nem nướng** — đặc sản Phan Rang, quán dọc QL1 |
-| 14:00–16:00 | Phan Rang → Vĩnh Hy (~40km) | Rẽ **ĐT702** từ Phan Rang — đường đèo núi sát biển, uốn lượn qua rừng và mỏm đá. Đẹp nhất đoạn này. Đi chậm |
-| 16:00 | **Check-in TH Homes · Vĩnh Hy** | Thôn Khánh Hội, Xã Ninh Hải · ☎ 0398315888 |
-| 16:30–17:30 | **Muối Cà Ná hoàng hôn** | Quay lại QL1 ~20km — đồng muối hồng lúc chiều, chụp hình đẹp |
-| 19:00 | **Cơm hải sản Vĩnh Hy** | Tôm hùm, cá mú, ốc — rẻ hơn NT nhiều lần |
+| 05:00 | Xuất phát từ nhà · **183 Trương Định, Bình Dương** | Xuất phát sớm để tránh nắng buổi trưa — đoạn Bình Thuận nóng kinh khủng |
+| 05:00–09:00 | Bình Dương → Phan Thiết (~200km) | **QL1A** suốt tuyến: 183 Trương Định → Đồng Nai (Biên Hòa) → Long Khánh → Xuân Lộc → Hàm Tân → Phan Thiết · *Đường thẳng nhanh hơn QL55 ven biển ~1h* |
+| 09:00–09:20 | **★ Tháp Po Sah Inư** (Phú Hài, đầu Võ Nguyên Giáp) | Tháp Chăm cổ trên đồi — view toàn cảnh vịnh Phan Thiết. Vé ~15k. Dừng nhanh 15' chụp hình + ngắm cảnh |
+| 09:20–10:00 | **Đường ven biển Phan Thiết** (~22km) | Quay xuống **Võ Nguyên Giáp** → nối **ĐT706B (Nguyễn Đình Chiểu)** chạy dọc bờ biển qua Hàm Tiến, Mũi Né — bãi biển + resort + đồi cát 2 bên |
+| 10:00–10:15 | **★ Đồi Cát Đỏ Mũi Né** (Nguyễn Đình Chiểu, gần Hòn Rơm) | Đồi cát đỏ biểu tượng — chụp hình ngay bên đường, không phải đi sâu. Sáng nắng dịu rất đẹp |
+| 10:15–11:00 | → Bầu Trắng (~30km) | Tiếp **ĐT716** Mũi Né → Hòa Thắng — đường ven biển mới, view biển + cát |
+| 11:00–11:40 | **★ BẦU TRẮNG** (Hòa Thắng, Bắc Bình) | Đồi cát trắng bao quanh hồ nước xanh ngọc — hoang sơ lạ mắt giữa sa mạc cát. Dừng ~30–40' chụp hình |
+| 11:40–12:30 | → Cổ Thạch (~30km) | QL1 ven biển |
+| 12:30–13:30 | **★ CỔ THẠCH** | Bãi đá 7 màu độc nhất VN. Đi bộ ra mỏm đá ~15'. Đẹp nhất lúc nước ròng |
+| 13:30–15:00 | Cổ Thạch → Phan Rang + ăn trưa (~80km) | QL1 ven biển. **Bánh căn + nem nướng** — đặc sản Phan Rang, quán dọc QL1 |
+| 15:00–17:00 | Phan Rang → Vĩnh Hy (~40km) | Rẽ **ĐT702** từ Phan Rang — đường đèo núi sát biển, uốn lượn qua rừng và mỏm đá. Đẹp nhất đoạn này. Đi chậm |
+| 17:00 | **Check-in TH Homes · Vĩnh Hy** | Thôn Khánh Hội, Xã Ninh Hải · ☎ 0398315888 |
+| 17:30–18:30 | **Muối Cà Ná hoàng hôn** *(optional)* | Đồng muối hồng lúc chiều — chụp hình đẹp. *Lưu ý: backtrack ~50km mỗi chiều — skip nếu mệt* |
+| 19:30 | **Cơm hải sản Vĩnh Hy** | Tôm hùm, cá mú, ốc — rẻ hơn NT nhiều lần |
 
-> 💡 **Lưu ý Day 1**: QL55 ven biển từ Bà Rịa — không dùng cao tốc, đẹp hơn nhiều, chậm hơn ~30 phút. Bầu Trắng: vào sáng sớm khi chưa nắng, cát mịn trắng + hồ xanh ngọc cực đẹp. **ĐT702** Phan Rang → Vĩnh Hy hẹp và nhiều cua — đi chậm, không vội.
+> 💡 **Lưu ý Day 1**: **QL1A** từ Bình Dương → Phan Thiết — đường thẳng, xe tải đông nhưng nhanh hơn QL55 ven biển ~1h. Đoạn Long Khánh – Xuân Lộc nhiều xe container, bám sát phải. Vào Phan Thiết: **Po Sah Inư** ngay đầu Võ Nguyên Giáp tiện ghé 15'. Sau đó **đường ven biển ĐT706B (Nguyễn Đình Chiểu)** → **Đồi Cát Đỏ** chụp hình → ĐT716 đi Bầu Trắng. **ĐT702** Phan Rang → Vĩnh Hy hẹp và nhiều cua — đi chậm, không vội. Muối Cà Ná: backtrack ~50km, cân nhắc dựa trên sức khỏe sau ngày dài.
 
 **Ngủ**: Vĩnh Hy — Homestay ~200–350k/phòng
 
@@ -160,8 +165,8 @@ SG ──► Cổ Thạch ──► Vĩnh Hy ──► Đèo Cả ──► Phú
 
 ---
 
-### Day 7 · 2/5 (Thứ Sáu) — Tà Đùng → Rừng Bù Gia Mập → Sài Gòn
-**Tổng quãng đường: ~310km · Về nhà ~15:00**
+### Day 7 · 2/5 (Thứ Sáu) — Tà Đùng → Rừng Bù Gia Mập → Nhà (Bình Dương)
+**Tổng quãng đường: ~240km · Về nhà ~14:30**
 
 | Thời gian | Điểm | Chi tiết |
 |-----------|------|----------|
@@ -170,10 +175,10 @@ SG ──► Cổ Thạch ──► Vĩnh Hy ──► Đèo Cả ──► Phú
 | 08:00–11:00 | Tà Đùng → đường rừng → **Bù Gia Mập** (~150km) | Rời Tà Đùng, xuôi về Bình Phước theo đường rừng qua Đắk Nông → vào **Vườn quốc gia Bù Gia Mập**. Đường xuyên rừng nguyên sinh ít xe, mát, xanh mướt — khác hẳn QL14 trống trải |
 | 11:00–12:00 | **★ Bù Gia Mập** (Bình Phước) | Ghé cổng VQG, đi sâu vào đường mòn rừng 15–20'. Rừng nguyên sinh hiếm còn ở miền Nam — cây cổ thụ, suối nhỏ, không khí trong lành. Chụp hình rồi tiếp tục |
 | 12:00–13:00 | Ăn trưa Bù Đăng / Đồng Xoài | Cơm rừng hoặc quán ven đường QL14 đoạn Bình Phước |
-| 13:00–15:30 | Đồng Xoài → QL13 → SG (~150km) | Qua Bình Dương về SG — đông ngày lễ cuối, chịu khó |
-| ~15:30 | **Về tới Sài Gòn** | Kết thúc 7 ngày · ~1,620km · biển + hang + san hô + đèo + rừng + cao nguyên + hồ |
+| 13:00–14:30 | Đồng Xoài → QL13 → Bình Dương (~80km) | QL13 thẳng về Thủ Dầu Một — đông ngày lễ cuối, chịu khó. *Lợi thế: ngắn hơn về SG ~70km* |
+| ~14:30 | **Về tới nhà · 183 Trương Định, Bình Dương** | Kết thúc 7 ngày · ~1,540km · biển + hang + san hô + đèo + rừng + cao nguyên + hồ |
 
-> 💡 **Lưu ý Day 7**: Đường rừng vào Bù Gia Mập từ hướng Đắk Nông hẹp và cua — đi chậm, không nhanh được. Đổ xăng ở Đắk Nông trước khi vào khu rừng. QL13 từ Đồng Xoài về SG đông ngày 2/5 — cộng thêm 30–60' kẹt xe.
+> 💡 **Lưu ý Day 7**: Đường rừng vào Bù Gia Mập từ hướng Đắk Nông hẹp và cua — đi chậm, không nhanh được. Đổ xăng ở Đắk Nông trước khi vào khu rừng. QL13 Đồng Xoài → Bình Dương đông ngày 2/5 — cộng thêm 30–60' kẹt xe (vẫn nhanh hơn về SG ~70km).
 
 ---
 
@@ -217,14 +222,14 @@ SG ──► Cổ Thạch ──► Vĩnh Hy ──► Đèo Cả ──► Phú
 
 | Ngày | Đoạn | Km | Lưu ý đường |
 |------|------|----|------------|
-| Day 1 | SG → Vĩnh Hy | ~310km | QL55 ven biển, không cao tốc |
+| Day 1 | 183 Trương Định (BD) → Phan Thiết → Vĩnh Hy | ~310km | QL1A → Võ Nguyên Giáp → đường ven biển Phan Thiết (ĐT706B) → ĐT716 |
 | Day 2 | Vĩnh Hy chill | ~30km | |
 | Day 3 | Vĩnh Hy → Phú Yên → Quy Nhơn | ~330km | Đèo Cả cũ + QL1D + Đèo Cù Mông |
 | Day 4 | QN → DT729 → Bãi Xép → NT | ~250km | DT729 sáng sớm |
 | Day 5 | NT → Khánh Lê → Bảo Lộc | ~250km | |
 | Day 6 | Bảo Lộc → Tà Đùng | ~150km | |
-| Day 7 | Tà Đùng → Bù Gia Mập → SG | ~310km | Đường rừng, không QL14 thẳng |
-| **Tổng** | | **~1,630km** | |
+| Day 7 | Tà Đùng → Bù Gia Mập → 183 Trương Định (BD) | ~240km | Đường rừng, QL13 về thẳng Bình Dương (ngắn hơn về SG ~70km) |
+| **Tổng** | | **~1,560km** | |
 
 ---
 
@@ -257,7 +262,7 @@ SG ──► Cổ Thạch ──► Vĩnh Hy ──► Đèo Cả ──► Phú
 
 | Hạng mục | Tổng 2 người | /người |
 |----------|-------------|--------|
-| Xăng (~1,620km, xe 50cc, ~1.5L/100km) | ~1.25 triệu | **~620k** |
+| Xăng (~1,560km, xe 50cc, ~1.5L/100km) | ~1.2 triệu | **~600k** |
 | Khách sạn (5 đêm + 1 đêm camping) | ~2.4 triệu | **~1.2 triệu** |
 | Ăn uống 7 ngày (200–300k/ngày/người) | ~3.0 triệu | **~1.5 triệu** |
 | Vé tham quan (Đảo Nở, Gành Đá Đĩa, Thác Đam Bri...) | ~400k | **~200k** |
