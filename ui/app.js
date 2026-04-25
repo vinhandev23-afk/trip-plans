@@ -27,13 +27,17 @@ let state = {
 
 // ─── API ───────────────────────────────────────────────────────────────
 async function fetchTrips() {
-  const res = await fetch('/api/trips');
+  const url = IS_LOCAL ? '/api/trips' : '/trips.json';
+  const res = await fetch(url);
   if (!res.ok) throw new Error('Failed to load trips');
   return res.json();
 }
 
 async function fetchReadme(name) {
-  const res = await fetch(`/api/trips/${name}/readme`);
+  const url = IS_LOCAL
+    ? `/api/trips/${name}/readme`
+    : `/trips/${name}/README.md`;
+  const res = await fetch(url);
   if (!res.ok) throw new Error('README not found');
   return res.text();
 }

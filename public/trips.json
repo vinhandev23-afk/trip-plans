@@ -1,0 +1,40 @@
+[
+  {
+    "name": "roadtrip-30-4",
+    "title": "🏍️ Road Trip 30/4 · 2026",
+    "subtitle": "Theo Bờ Nam — Lên Tây Nguyên",
+    "dates": "26/4 – 2/5/2026",
+    "duration": "7 ngày 6 đêm",
+    "people": 2,
+    "transport": "xe máy",
+    "km": "~1,560km",
+    "budget": "~3.7 triệu",
+    "start": "183 Trương Định, Bình Dương",
+    "status": "upcoming",
+    "icon": "🏍️",
+    "public": true,
+    "hasReadme": true,
+    "pdfs": [
+      "roadtrip-30-4-2026.pdf"
+    ]
+  },
+  {
+    "name": "phuquy",
+    "title": "🏝️ Club Trip Phú Quý · 2026",
+    "subtitle": "HCM → Phan Thiết → Superdong → Đảo Phú Quý",
+    "dates": "8–10/5 hoặc 15–17/5/2026",
+    "duration": "3 ngày 2 đêm",
+    "people": 10,
+    "transport": "máy bay + tàu",
+    "km": "~300km",
+    "budget": "< 2.5 triệu",
+    "status": "planning",
+    "icon": "🏝️",
+    "public": true,
+    "hasReadme": true,
+    "pdfs": [
+      "phuquy-2026.pdf",
+      "phuquy-trip-2026.pdf"
+    ]
+  }
+]

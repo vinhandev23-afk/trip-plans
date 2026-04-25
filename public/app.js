@@ -27,13 +27,17 @@ let state = {
 
 // ─── API ───────────────────────────────────────────────────────────────
 async function fetchTrips() {
-  const res = await fetch('/api/trips');
+  const url = IS_LOCAL ? '/api/trips' : '/trips.json';
+  const res = await fetch(url);
   if (!res.ok) throw new Error('Failed to load trips');
   return res.json();
 }
 
 async function fetchReadme(name) {
-  const res = await fetch(`/api/trips/${name}/readme`);
+  const url = IS_LOCAL
+    ? `/api/trips/${name}/readme`
+    : `/trips/${name}/README.md`;
+  const res = await fetch(url);
   if (!res.ok) throw new Error('README not found');
   return res.text();
 }
@@ -56,6 +60,13 @@ async function patchMeta(name, patch) {
     body: JSON.stringify(patch),
   });
   return res.json();
+}
+
+// ─── MOBILE SIDEBAR DRAWER ─────────────────────────────────────────────
+const isMobile = () => window.matchMedia('(max-width: 768px)').matches;
+
+function setSidebar(open) {
+  document.body.classList.toggle('sidebar-open', open);
 }
 
 // ─── SIDEBAR ───────────────────────────────────────────────────────────
@@ -148,6 +159,7 @@ async function selectTrip(name) {
   state.tab = state.current?.hasReadme ? 'readme' : 'pdf';
   renderSidebar();
   renderTripView();
+  if (isMobile()) setSidebar(false);
 }
 
 function renderTripView() {
@@ -186,10 +198,10 @@ function renderTripView() {
         </nav>
       </div>
       <div class="trip-content">
-        <div id="pane-readme" style="display:${state.tab === 'readme' ? 'flex' : 'none'}; flex-direction:column">
+        <div id="pane-readme" style="display:${state.tab === 'readme' ? 'block' : 'none'}">
           <div class="loading">Đang tải…</div>
         </div>
-        <div id="pane-pdf" style="display:${state.tab === 'pdf' ? 'flex' : 'none'}; flex:1; flex-direction:column">
+        <div id="pane-pdf" style="display:${state.tab === 'pdf' ? 'flex' : 'none'}">
           ${firstPdf
             ? `<div class="pdf-toolbar">
                  ${trip.pdfs.length > 1
@@ -233,6 +245,12 @@ async function loadReadme(name) {
   try {
     const md = await fetchReadme(name);
     pane.innerHTML = marked.parse(md);
+    pane.querySelectorAll('table').forEach(table => {
+      const wrap = document.createElement('div');
+      wrap.className = 'table-scroll';
+      table.parentNode.insertBefore(wrap, table);
+      wrap.appendChild(table);
+    });
   } catch {
     pane.innerHTML = '<p class="error-msg">Không tìm thấy README.md</p>';
   }
@@ -245,8 +263,8 @@ function switchTab(tab) {
   document.querySelectorAll('.tab-btn').forEach(b => {
     b.classList.toggle('active', b.dataset.tab === tab);
   });
-  if (readme) readme.style.display = tab === 'readme' ? 'flex' : 'none';
-  if (pdf)    pdf.style.display    = tab === 'pdf'    ? 'flex' : 'none';
+  if (readme) readme.style.display = tab === 'readme' ? 'block' : 'none';
+  if (pdf)    pdf.style.display    = tab === 'pdf'    ? 'flex'  : 'none';
 }
 
 // ─── MODAL ─────────────────────────────────────────────────────────────
@@ -320,7 +338,17 @@ async function init() {
     if (e.target === document.getElementById('modal')) closeModal();
   });
   document.addEventListener('keydown', e => {
-    if (e.key === 'Escape') closeModal();
+    if (e.key === 'Escape') { closeModal(); setSidebar(false); }
+  });
+
+  // Mobile sidebar drawer
+  document.getElementById('menu-toggle').addEventListener('click', () => {
+    setSidebar(!document.body.classList.contains('sidebar-open'));
+  });
+  document.getElementById('sidebar-overlay').addEventListener('click', () => setSidebar(false));
+  // Reset drawer state when crossing the breakpoint
+  window.matchMedia('(max-width: 768px)').addEventListener('change', e => {
+    if (!e.matches) setSidebar(false);
   });
 }
 

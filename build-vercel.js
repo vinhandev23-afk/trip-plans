@@ -20,21 +20,19 @@ async function copyFile(src, dest) {
 async function build() {
   console.log('Building for Vercel...');
 
-  // Clean and recreate public/
   await fsp.rm(PUBLIC, { recursive: true, force: true });
   await fsp.mkdir(PUBLIC, { recursive: true });
 
-  // Copy UI files
   for (const file of ['index.html', 'style.css', 'app.js']) {
     await copyFile(path.join(UI_DIR, file), path.join(PUBLIC, file));
     console.log(`  ✓ ui/${file}`);
   }
 
-  // Copy public trip outputs (PDFs only)
   const entries = await fsp.readdir(TRIPS_DIR, { withFileTypes: true });
+  const publicTrips = [];
 
   for (const entry of entries) {
-    if (!entry.isDirectory() || entry.name.startsWith('.')) continue;
+    if (!entry.isDirectory() || entry.name.startsWith('.') || entry.name.startsWith('_')) continue;
 
     const tripDir = path.join(TRIPS_DIR, entry.name);
     let meta = {};
@@ -47,10 +45,26 @@ async function build() {
       continue;
     }
 
+    // Copy README.md so it can be fetched statically
+    const readmeSrc = path.join(tripDir, 'README.md');
+    let hasReadme = false;
+    try {
+      await copyFile(readmeSrc, path.join(PUBLIC, 'trips', entry.name, 'README.md'));
+      hasReadme = true;
+      console.log(`  ✓ trips/${entry.name}/README.md`);
+
+      // Use H1 from README as title fallback
+      if (meta.title === entry.name || !meta.title) {
+        const lines = (await fsp.readFile(readmeSrc, 'utf-8')).split('\n');
+        const h1 = lines.find(l => l.startsWith('# '));
+        if (h1) meta.title = h1.replace(/^#\s*/, '').trim();
+      }
+    } catch {}
+
     // Copy output PDFs
     const outputDir = path.join(tripDir, 'output');
-    let files;
-    try { files = await fsp.readdir(outputDir); } catch { continue; }
+    let files = [];
+    try { files = await fsp.readdir(outputDir); } catch {}
 
     const pdfs = files.filter(f => f.endsWith('.pdf'));
     for (const pdf of pdfs) {
@@ -60,7 +74,15 @@ async function build() {
       await copyFile(src, dest);
       console.log(`  ✓ trips/${entry.name}/output/${pdf} (${(size / 1024 / 1024).toFixed(1)}MB)`);
     }
+
+    publicTrips.push({ ...meta, name: entry.name, hasReadme, pdfs });
   }
+
+  const order = { upcoming: 0, planning: 1, completed: 2 };
+  publicTrips.sort((a, b) => (order[a.status] ?? 3) - (order[b.status] ?? 3));
+
+  await fsp.writeFile(path.join(PUBLIC, 'trips.json'), JSON.stringify(publicTrips, null, 2));
+  console.log(`  ✓ trips.json (${publicTrips.length} public trips)`);
 
   console.log('\nBuild complete → public/');
 }

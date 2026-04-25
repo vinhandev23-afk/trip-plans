@@ -289,6 +289,7 @@ html, body {
 
 /* README PANE */
 #pane-readme {
+  display: block;
   flex: 1;
   overflow-y: auto;
   padding: 28px 36px;
@@ -432,8 +433,8 @@ html, body {
 
 /* ─── PDF PANE ─── */
 #pane-pdf {
-  flex: 1;
   display: flex;
+  flex: 1;
   flex-direction: column;
   overflow: hidden;
 }
@@ -652,4 +653,117 @@ html, body {
   text-align: center;
   padding: 24px;
   font-size: 13px;
+}
+
+/* ─── MOBILE: menu toggle + drawer ─── */
+.menu-toggle {
+  display: none;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 50;
+  width: 38px;
+  height: 38px;
+  background: var(--surface);
+  border: 1px solid var(--border-2);
+  color: var(--text);
+  border-radius: var(--r-sm);
+  font-size: 18px;
+  cursor: pointer;
+  line-height: 1;
+  align-items: center;
+  justify-content: center;
+}
+
+.sidebar-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(2px);
+  z-index: 40;
+}
+
+/* Wrapper added in JS so README tables can scroll horizontally on mobile */
+.table-scroll {
+  overflow-x: auto;
+  margin-bottom: 20px;
+  -webkit-overflow-scrolling: touch;
+}
+.table-scroll table { margin-bottom: 0; }
+
+/* ─── RESPONSIVE: tablet & mobile ─── */
+@media (max-width: 768px) {
+  .menu-toggle { display: flex; }
+
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 280px;
+    min-width: 0;
+    z-index: 45;
+    transform: translateX(-100%);
+    transition: transform 0.22s ease;
+    box-shadow: 0 0 24px rgba(0, 0, 0, 0.4);
+  }
+  body.sidebar-open .sidebar { transform: translateX(0); }
+  body.sidebar-open .sidebar-overlay { display: block; }
+  body.sidebar-open .menu-toggle { display: none; }
+
+  .main { width: 100%; }
+
+  /* Leave room for the hamburger button at top-left */
+  .trip-hero { padding: 14px 16px 12px 60px; }
+  .trip-title { font-size: 18px; line-height: 1.25; }
+  .trip-subtitle { font-size: 12px; margin-bottom: 10px; }
+
+  .tab-nav { padding: 0 10px; }
+  .tab-btn { padding: 10px 12px 9px; font-size: 12px; }
+
+  #pane-readme { padding: 18px 16px 28px; }
+  #pane-readme h1 { font-size: 21px; }
+  #pane-readme h2 { font-size: 14px; margin: 24px 0 10px; }
+  #pane-readme h3 { font-size: 13px; margin: 18px 0 8px; }
+  #pane-readme p, #pane-readme li { line-height: 1.65; }
+  #pane-readme pre { padding: 12px 14px; }
+  #pane-readme table { font-size: 12px; }
+  #pane-readme thead th,
+  #pane-readme tbody td { padding: 6px 10px; }
+
+  .pdf-toolbar { padding: 8px 12px; gap: 8px; flex-wrap: wrap; }
+  .pdf-link { padding: 5px 10px; }
+
+  .empty-state { padding: 24px; }
+  .empty-icon { font-size: 44px; }
+  .empty-state h2 { font-size: 18px; }
+
+  /* Modal becomes near full-screen sheet */
+  .modal {
+    width: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    height: 100%;
+    border-radius: 0;
+    border: none;
+  }
+  .modal-header { padding: 18px 18px 0; margin-bottom: 16px; }
+  .modal-form { padding: 0 18px 24px; }
+  .form-row.two-col { grid-template-columns: 1fr; gap: 0; }
+  .form-row.two-col > div { margin-bottom: 15px; }
+  .form-row.two-col > div:last-child { margin-bottom: 0; }
+  /* Bump input font-size to prevent iOS auto-zoom on focus */
+  .form-row input,
+  .form-row textarea,
+  .form-row select { font-size: 16px; padding: 10px 12px; }
+  .modal-actions { position: sticky; bottom: 0; background: var(--surface); }
+}
+
+@media (max-width: 380px) {
+  .trip-hero { padding: 12px 12px 10px 56px; }
+  .trip-title { font-size: 16px; }
+  #pane-readme { padding: 14px 12px 24px; }
+  #pane-readme h1 { font-size: 19px; }
+  .chip { padding: 3px 8px; font-size: 10.5px; }
 }
