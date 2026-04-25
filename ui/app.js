@@ -153,12 +153,52 @@ function renderSidebar() {
   }
 }
 
+// ─── ROUTING (hash-based) ──────────────────────────────────────────────
+function readHash() {
+  const raw = location.hash.replace(/^#\/?/, '');
+  if (!raw) return null;
+  const [name, tab] = raw.split('/').map(decodeURIComponent);
+  return { name, tab: tab === 'pdf' ? 'pdf' : 'readme' };
+}
+
+function writeHash(name, tab) {
+  const target = name
+    ? `#/${encodeURIComponent(name)}${tab === 'pdf' ? '/pdf' : ''}`
+    : '';
+  if (location.hash !== target) {
+    history.pushState(null, '', target || location.pathname + location.search);
+  }
+}
+
+function renderEmptyState() {
+  const main = document.getElementById('main');
+  main.innerHTML = `
+    <div class="empty-state">
+      <div class="empty-icon">🏝️</div>
+      <h2>Chọn một chuyến đi</h2>
+      <p>Hoặc tạo kế hoạch mới để bắt đầu</p>
+      ${IS_LOCAL ? '<button class="btn-primary" id="btn-new-empty">+ Tạo Trip Mới</button>' : ''}
+    </div>`;
+  document.getElementById('btn-new-empty')?.addEventListener('click', openModal);
+}
+
+function applyRoute(name, tab) {
+  state.current = state.trips.find(t => t.name === name) || null;
+  if (state.current) {
+    state.tab = state.current.hasReadme && tab !== 'pdf' ? 'readme' : 'pdf';
+    renderSidebar();
+    renderTripView();
+  } else {
+    state.tab = 'readme';
+    renderSidebar();
+    renderEmptyState();
+  }
+}
+
 // ─── TRIP VIEW ─────────────────────────────────────────────────────────
 async function selectTrip(name) {
-  state.current = state.trips.find(t => t.name === name) || null;
-  state.tab = state.current?.hasReadme ? 'readme' : 'pdf';
-  renderSidebar();
-  renderTripView();
+  applyRoute(name);
+  writeHash(name, state.tab);
   if (isMobile()) setSidebar(false);
 }
 
@@ -265,6 +305,7 @@ function switchTab(tab) {
   });
   if (readme) readme.style.display = tab === 'readme' ? 'block' : 'none';
   if (pdf)    pdf.style.display    = tab === 'pdf'    ? 'flex'  : 'none';
+  if (state.current) writeHash(state.current.name, tab);
 }
 
 // ─── MODAL ─────────────────────────────────────────────────────────────
@@ -291,9 +332,24 @@ async function init() {
   try {
     state.trips = await fetchTrips();
     renderSidebar();
+    // Apply initial route from URL hash if present
+    const route = readHash();
+    if (route?.name && state.trips.find(t => t.name === route.name)) {
+      applyRoute(route.name, route.tab);
+    }
   } catch (e) {
     listEl.innerHTML = `<div class="error-msg">Lỗi tải trips:<br>${e.message}</div>`;
   }
+
+  // Browser back/forward + manual hash edits
+  window.addEventListener('popstate', () => {
+    const route = readHash();
+    applyRoute(route?.name, route?.tab);
+  });
+  window.addEventListener('hashchange', () => {
+    const route = readHash();
+    applyRoute(route?.name, route?.tab);
+  });
 
   // Auto-slug from title
   const titleInput = document.querySelector('input[name="title"]');
