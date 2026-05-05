@@ -5,7 +5,9 @@
       "Bash(git add *)",
       "Bash(git commit -m ' *)",
       "Bash(git push *)",
-      "Bash(node build-vercel.js)"
+      "Bash(node build-vercel.js)",
+      "Bash(git fetch *)",
+      "Bash(git rebase *)"
     ]
   }
 }
